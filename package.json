@@ -1,0 +1,19 @@
+{
+  "name": "eric_service_projectdesc",
+  "version": "1.0.0",
+  "description": "Service that provides project details. ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JumpStart38/Eric_Service_ProjectDesc.git"
+  },
+  "author": "Eric",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JumpStart38/Eric_Service_ProjectDesc/issues"
+  },
+  "homepage": "https://github.com/JumpStart38/Eric_Service_ProjectDesc#readme"
+}
