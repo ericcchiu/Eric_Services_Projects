@@ -4,7 +4,7 @@
   "description": "Service that provides project details. ",
   "main": "server.js",
   "scripts": {
-    "react-dev": "webpack -d --watch", 
+    "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/server.js"
   },
   "repository": {
