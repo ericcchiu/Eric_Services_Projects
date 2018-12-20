@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
+import sampleData from '../../sample/sampleData.json';
 
 class App extends Component {
   constructor(props) { 
     super(props); 
-    this.state({
-      projectsObj: {
+    this.state = {
+     projectList: [],
+     currentProject: {
 
-      }
-    }) 
+     }
+    };
   }
   render() {
     return (

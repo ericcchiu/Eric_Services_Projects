@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import CreatorInfoDisplay from './CreatorInfoDisplay';
+import ProjectImages from './ProjectImages';
 
 
 class ProjectView extends Component {
@@ -13,6 +14,7 @@ class ProjectView extends Component {
         <h1>Project title</h1>
         <h3>Project descripton </h3>
         <CreatorInfoDisplay />
+        <ProjectImages />
       </div>
     )
   }

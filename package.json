@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "react-dev": "webpack -d --watch",
-    "server-dev": "nodemon server/server.js"
+    "server-dev": "nodemon server/server.js",
+    "seed": "node projectDbPopulator.js"
   },
   "repository": {
     "type": "git",
