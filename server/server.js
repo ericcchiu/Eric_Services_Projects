@@ -28,12 +28,13 @@ app.get('/projects', (req, res) => {
       res.status(200).json(listOfProjects);
     })
     .catch((err) => {
-      res.status(400).send('Error retrieving projects');
+      res.status(403).send('Error retrieving projects');
     })
 }); 
 // GET one project route from external servers
 app.get('/projects/:id', (req, res) => {
   console.log('CURRENT PARAMS stuff ', req.params); 
+  res.status(200).send(req.params.id)
 }); 
 
 
