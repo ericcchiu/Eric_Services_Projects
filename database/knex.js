@@ -1,10 +1,14 @@
-const knex = require('knex')({
+require('dotenv').config();
+const pg = require('pg');
+
+const db = require('knex')({
   client: 'pg',
-  version: '7.7.1',
   connection: {
-    host : '127.0.0.1',
-    user : 'ericcchiu',
-    password : 'student',
+    host : process.env.PSQL_HOST,
+    user : process.env.PSQL_USER,
+    password : process.env.PSQL_PASSWORD,
     database : 'projects'
   }
 });
+
+module.exports = db; 
