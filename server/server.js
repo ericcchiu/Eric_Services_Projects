@@ -33,6 +33,8 @@ app.get('/projects', (req, res) => {
 }); 
 // GET one project route from external servers
 app.get('/projects/:id', (req, res) => {
+
+  
   console.log('CURRENT PARAMS stuff ', req.params); 
   res.status(200).send(req.params.id)
 }); 
