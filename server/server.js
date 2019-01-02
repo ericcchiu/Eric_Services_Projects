@@ -19,6 +19,7 @@ app.use(morgan('dev'));
 // ROUTES
 // GET all projects from database 
 app.get('/projects', (req, res) => {
+  console.log('Hello does this work?');
   knex.select()
     .from('projects')
     .then(listOfProjects => {
@@ -28,13 +29,12 @@ app.get('/projects', (req, res) => {
       res.status(200).json(listOfProjects);
     })
     .catch((err) => {
-      res.status(403).send('Error retrieving projects');
+      console.log('Error retrieving objects from server route /projects')
+      res.status(404).send('Error retrieving projects');
     })
 }); 
 // GET one project route from external servers
 app.get('/projects/:id', (req, res) => {
-
-  
   console.log('CURRENT PARAMS stuff ', req.params); 
   res.status(200).send(req.params.id)
 }); 

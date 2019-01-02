@@ -35,7 +35,8 @@ class Project extends Component {
     console.log('AFTER RENDER', this.state.projectList[1]);
     return (
       <div>
-        <h1>Welcome to Jumpstart38</h1>
+        <h1>Project View Services</h1>
+        <h2>Testing connection in progress</h2>
         <ProjectView currentProject={this.state.currentProject}/>
       </div>
     )
