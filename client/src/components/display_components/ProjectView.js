@@ -1,14 +1,6 @@
 import React from "react";
-import styles from "./ProjectView.css";
-
+import "./ProjectView.css";
 const ProjectView = props => {
-  const creatorBlockStyle = {
-    // border: "0.5px solid black",
-    // borderRadius: "4px",
-    // margin: "5px",
-    // display: "inline-block"
-  };
-
   return (
     <div className="ProjectView">
       <div className="CreatorInfoDisplay">
