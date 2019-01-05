@@ -8,15 +8,12 @@ class Project extends Component {
     super(props);
     this.state = {
       projectList: [],
-      currentProject: sampleData[1],
-      projectRoute: "http://" + window.location.hostname + ":3000/projects/"
+      currentProject: sampleData[1]
     };
-    this.onSelectProjectHandler = this.onSelectProjectHandler.bind(this);
   }
 
-  onSelectProjectHandler(event) {}
-
   componentDidMount() {
+    // this.props.id is not passed down and undefined causes 500 internal error
     axios
       .get("http://localhost:3000/projects/" + this.props.id)
       .then(project => {
