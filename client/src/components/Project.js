@@ -53,7 +53,6 @@ class Project extends Component {
     return (
       <div>
         <h1>Project View Services</h1>
-        <h2>Testing connection in progress</h2>
         <ProjectView currentProject={this.state.currentProject} />
       </div>
     );
