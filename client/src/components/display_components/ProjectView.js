@@ -1,25 +1,44 @@
 import React from "react";
-import "./ProjectView.css";
 
 import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import { withStyles } from "@material-ui/core/styles";
 
 const ProjectView = props => {
+  // const styles = {
+  //   root: {
+  //     width: "100%",
+  //     maxWidth: 500
+  //   }
+  // };
   return (
     <div className="ProjectView">
-      <Grid direction="row" justify="center" alignItems="center">
-        <div className="CreatorInfoDisplay">
-          <img
-            src={props.currentProject.creator_img}
-            alt="https://cdn2-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-1.jpg"
-          />
-          <div>
-            <span>By {props.currentProject.creator}</span>
+      <Grid
+        container
+        direction="row"
+        justify="flex-start"
+        alignItems="flex-start"
+        spacing={5}
+      >
+        <Grid item>
+          <div className="CreatorInfoDisplay">
+            <img
+              src={props.currentProject.creator_img}
+              alt="https://cdn2-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-1.jpg"
+            />
+            <div>
+              <Typography>By {props.currentProject.creator}</Typography>
+            </div>
           </div>
-        </div>
+        </Grid>
 
         <div className="ProjectHeader">
-          <h1>{props.currentProject.name}</h1>
-          <h3>{props.currentProject.blurb}</h3>
+          <Typography component="h6" variant="h6" gutterBottom>
+            {props.currentProject.name}
+          </Typography>
+          <Typography component="subtitle1" variant="subtitle1" gutterBottom>
+            {props.currentProject.blurb}
+          </Typography>
         </div>
       </Grid>
 

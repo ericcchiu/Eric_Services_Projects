@@ -52,7 +52,6 @@ class Project extends Component {
     // console.log("AFTER RENDER", this.state.projectList[1]);
     return (
       <div>
-        <h1>Project View Services</h1>
         <ProjectView currentProject={this.state.currentProject} />
       </div>
     );
