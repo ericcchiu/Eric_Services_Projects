@@ -1,18 +1,32 @@
 import React from "react";
-
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 
 const ProjectView = props => {
-  // const styles = {
-  //   root: {
-  //     width: "100%",
-  //     maxWidth: 500
-  //   }
-  // };
+  const styles = {
+    ProjectViewStyle: {
+      paddingTop: "10px",
+      paddingRight: "20px",
+      paddingBottom: "10px",
+      paddingLeft: "20px"
+    },
+    CreatorStyle: {
+      paddingTop: "2px",
+      paddingBottom: "2px",
+      paddingLeft: "10px",
+      color: "slategray"
+    },
+    HeaderStyle: {
+      padding: "15px"
+    },
+
+    ProjectImageStyle: {
+      padding: "10px"
+    }
+  };
   return (
-    <div className="ProjectView">
+    <div className="ProjectView" style={styles.ProjectViewStyle}>
       <Grid
         container
         direction="row"
@@ -21,18 +35,18 @@ const ProjectView = props => {
         spacing={5}
       >
         <Grid item>
-          <div className="CreatorInfoDisplay">
+          <div className="ProjectCreatorImage" style={styles.CreatorStyle}>
             <img
               src={props.currentProject.creator_img}
               alt="https://cdn2-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-1.jpg"
             />
-            <div>
+            <div className="ProjectCreatorName" style={styles.CreatorStyle}>
               <Typography>By {props.currentProject.creator}</Typography>
             </div>
           </div>
         </Grid>
 
-        <div className="ProjectHeader">
+        <div className="ProjectHeader" style={styles.HeaderStyle}>
           <Typography component="h6" variant="h6" gutterBottom>
             {props.currentProject.name}
           </Typography>
@@ -42,15 +56,20 @@ const ProjectView = props => {
         </div>
       </Grid>
 
-      <div className="ProjectImage">
+      <div className="ProjectImage" style={styles.ProjectImageStyle}>
         <div className="full-project-image">
           <img src={props.currentProject.full_img} />
         </div>
-
-        <div className="full-project-caption">
-          <span>{props.currentProject.category}</span>
-          <span>{props.currentProject.location}</span>
-        </div>
+        <Grid item direction="row" justify="flex-start" alignItems="flex-start">
+          <div className="full-project-caption">
+            <Typography component="body1" variant="body1">
+              {props.currentProject.category}
+            </Typography>
+            <Typography component="body1" variant="body1" color="slategray">
+              {props.currentProject.location}
+            </Typography>
+          </div>
+        </Grid>
       </div>
     </div>
   );
