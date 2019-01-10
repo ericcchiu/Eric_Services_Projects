@@ -1,7 +1,5 @@
 import React from "react";
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import { withStyles } from "@material-ui/core/styles";
+// import Typography from "@material-ui/core/Typography";
 
 const ProjectView = props => {
   const styles = {
@@ -27,56 +25,30 @@ const ProjectView = props => {
   };
   return (
     <div className="ProjectView" style={styles.ProjectViewStyle}>
-      <Grid
-        container
-        direction="row"
-        justify="flex-start"
-        alignItems="flex-start"
-        spacing={5}
-      >
-        <Grid item>
-          <div className="ProjectCreatorImage" style={styles.CreatorStyle}>
-            <img
-              src={props.currentProject.creator_img}
-              alt="https://cdn2-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-1.jpg"
-            />
-            <div className="ProjectCreatorName" style={styles.CreatorStyle}>
-              <Typography>By {props.currentProject.creator}</Typography>
-            </div>
-          </div>
-        </Grid>
-
-        <div className="ProjectHeader" style={styles.HeaderStyle}>
-          <Typography component="h6" variant="h6" gutterBottom>
-            {props.currentProject.name}
-          </Typography>
-          <Typography component="subtitle1" variant="subtitle1" gutterBottom>
-            {props.currentProject.blurb}
-          </Typography>
+      <div className="ProjectCreatorImage" style={styles.CreatorStyle}>
+        <img
+          src={props.currentProject.creator_img}
+          alt="https://cdn2-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-1.jpg"
+        />
+        <div className="ProjectCreatorName" style={styles.CreatorStyle}>
+          <div>By {props.currentProject.creator}</div>
         </div>
-      </Grid>
+      </div>
+
+      <div className="ProjectHeader" style={styles.HeaderStyle}>
+        <h1>{props.currentProject.name}</h1>
+        <h3>{props.currentProject.blurb}</h3>
+      </div>
 
       <div className="ProjectImage" style={styles.ProjectImageStyle}>
         <div className="full-project-image">
           <img src={props.currentProject.full_img} />
         </div>
-        <Grid container>
-          <Grid
-            item
-            direction="row"
-            justify="flex-start"
-            alignItems="flex-start"
-          >
-            <div className="full-project-caption">
-              <Typography component="body1" variant="body1">
-                {props.currentProject.category}
-              </Typography>
-              <Typography component="body1" variant="body1">
-                {props.currentProject.location}
-              </Typography>
-            </div>
-          </Grid>
-        </Grid>
+
+        <div className="full-project-caption">
+          <div>{props.currentProject.category}</div>
+          <div>{props.currentProject.location}</div>
+        </div>
       </div>
     </div>
   );
