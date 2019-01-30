@@ -1,0 +1,39 @@
+.ProjectView {
+  display: flex;
+  flex-direction: column;
+  width: 100%; 
+}
+
+.ProjectHeaderBox {
+  display: flex; 
+  flex-direction: row;
+}
+.project-creator-box {
+  float: left; 
+  flex-direction: column;
+}
+
+.project-creator-image {
+  float: left;
+}
+
+img#creator-pic {
+  width: 50px; 
+  height: 50px;
+  border-radius: 5px;
+}
+
+p#project-creator {
+  font-size: 10pt;
+}
+
+.project-title-box {
+  float: center;
+}
+h1#project-title {
+  font-size: 12pt;
+  margin: 2px;
+}
+h3#project-subtitle {
+  font-size: 8pt;
+}
