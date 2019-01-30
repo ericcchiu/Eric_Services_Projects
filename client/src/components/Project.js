@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ProjectView from "./display_components/ProjectView.js";
+import ProjectView from "./DisplayComponent/ProjectView.js";
 import sampleData from "./sample/sampleData.json";
 import axios from "axios";
 
@@ -33,9 +33,9 @@ class Project extends Component {
       axios
         .get(
           "http://" +
-            window.location.hostname +
-            ":3000/projects/" +
-            this.props.id
+          window.location.hostname +
+          ":3000/projects/" +
+          this.props.id
         )
         .then(project => {
           this.setState({
