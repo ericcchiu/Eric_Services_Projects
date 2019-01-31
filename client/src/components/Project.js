@@ -16,7 +16,7 @@ class Project extends Component {
     // if this.props.id is not passed down and undefined causes 500 internal error
     axios
       .get(
-        "http://" + window.location.hostname + ":3000/projects/" + (this.props.id || 10)
+        "http://" + window.location.hostname + ":3000/projects/" + this.props.id
       )
       .then(project => {
         this.setState({

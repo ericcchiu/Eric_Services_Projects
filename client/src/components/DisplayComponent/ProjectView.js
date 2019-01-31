@@ -31,11 +31,11 @@ const ProjectView = props => {
 
         <div className="project-caption-box">
           <div className='project-category-box'>
-            <img id='category-icon' src='pictures/category.png' />
+            <div id='category-icon' />
             <div id='category-text'>{props.currentProject.category}</div>
           </div>
           <div className='project-location-box'>
-            <img id='location-icon' src='pictures/locationIcon.png' />
+            <div id='location-icon' />
             <div id='location-text' >{props.currentProject.location}</div>
           </div>
         </div>
