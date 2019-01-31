@@ -40,7 +40,6 @@ app.get("/projects/:id", (req, res) => {
     .where({ id: req.params.id })
     .from("projects")
     .then(dbResult => {
-      console.log("HELLO PROJECTS", dbResult);
       res.status(200);
       res.json(dbResult[0]);
     })

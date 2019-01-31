@@ -1,4 +1,5 @@
 import Project from "./components/Project";
+import './index.css';
 
 window.Project = Project;
 

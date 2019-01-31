@@ -24,12 +24,14 @@ img#creator-pic {
 }
 
 p#project-creator {
-  font-size: 10pt;
+  font-size: 8pt;
+  width: 100%;
 }
 
 .project-title-box {
   float: center;
 }
+
 h1#project-title {
   font-size: 12pt;
   margin: 2px;
