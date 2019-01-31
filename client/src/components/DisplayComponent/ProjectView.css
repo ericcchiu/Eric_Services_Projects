@@ -46,3 +46,35 @@ img#project-image {
   width: 85%;
   height: auto;
 }
+.project-caption-box {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: flex-start;
+}
+.project-category-box {
+  display: flex; 
+  margin: 10px;
+}
+.project-location-box {
+  display: flex;
+  margin: 10px;
+}
+img#category-icon {
+  width: 10%; 
+  height: 100%;
+  padding-right: 5px;
+}
+
+img#location-icon {
+  width: 10%; 
+  height: 100%;
+  padding-right: 5px;
+}
+
+#category-text {
+  font-size: 8pt;
+}
+
+#location-text {
+  font-size: 8pt;
+}

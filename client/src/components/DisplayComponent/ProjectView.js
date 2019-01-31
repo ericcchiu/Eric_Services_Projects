@@ -30,8 +30,14 @@ const ProjectView = props => {
         </div>
 
         <div className="project-caption-box">
-          <div>{props.currentProject.category}</div>
-          <div>{props.currentProject.location}</div>
+          <div className='project-category-box'>
+            <img id='category-icon' src='pictures/category.png' />
+            <div id='location-text'>{props.currentProject.category}</div>
+          </div>
+          <div className='project-location-box'>
+            <img id='location-icon' src='pictures/locationIcon.png' />
+            <div id='location-text' >{props.currentProject.location}</div>
+          </div>
         </div>
       </div>
     </div>
