@@ -26,7 +26,7 @@ const ProjectView = props => {
 
       <div className="project-image-box">
         <div className="full-project-image">
-          <img src={props.currentProject.full_img} />
+          <img id="project-image" src={props.currentProject.full_img} />
         </div>
 
         <div className="project-caption-box">
